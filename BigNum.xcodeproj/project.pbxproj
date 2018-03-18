@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5519F7C2205D82F800AD7B3E /* Digit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519F7C1205D82F800AD7B3E /* Digit.swift */; };
+		5519F7C4205DC36700AD7B3E /* SubtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519F7C3205DC36700AD7B3E /* SubtractionTests.swift */; };
+		5519F7C6205DC37200AD7B3E /* DivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519F7C5205DC37200AD7B3E /* DivisionTests.swift */; };
+		5519F7C8205DC37B00AD7B3E /* MultiplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519F7C7205DC37B00AD7B3E /* MultiplicationTests.swift */; };
 		5543F0F62059C40C0099FC45 /* BigNum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5543F0EC2059C40C0099FC45 /* BigNum.framework */; };
-		5543F0FB2059C40C0099FC45 /* BigNumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F0FA2059C40C0099FC45 /* BigNumTests.swift */; };
 		5543F0FD2059C40C0099FC45 /* BigNum.h in Headers */ = {isa = PBXBuildFile; fileRef = 5543F0EF2059C40C0099FC45 /* BigNum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5543F1072059C42A0099FC45 /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F1062059C42A0099FC45 /* BigInt.swift */; };
+		5543F1092059C4F60099FC45 /* BigInt+Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F1082059C4F60099FC45 /* BigInt+Numeric.swift */; };
+		5543F10D2059C5370099FC45 /* BigInt+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F10C2059C5370099FC45 /* BigInt+Comparable.swift */; };
+		5543F10F2059C72C0099FC45 /* BigInt+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F10E2059C72C0099FC45 /* BigInt+Initializers.swift */; };
+		5543F1132059DDF50099FC45 /* AdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F1122059DDF50099FC45 /* AdditionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +31,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5519F7C1205D82F800AD7B3E /* Digit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digit.swift; sourceTree = "<group>"; };
+		5519F7C3205DC36700AD7B3E /* SubtractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionTests.swift; sourceTree = "<group>"; };
+		5519F7C5205DC37200AD7B3E /* DivisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionTests.swift; sourceTree = "<group>"; };
+		5519F7C7205DC37B00AD7B3E /* MultiplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTests.swift; sourceTree = "<group>"; };
 		5543F0EC2059C40C0099FC45 /* BigNum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigNum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5543F0EF2059C40C0099FC45 /* BigNum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigNum.h; sourceTree = "<group>"; };
 		5543F0F02059C40C0099FC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5543F0F52059C40C0099FC45 /* BigNumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigNumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5543F0FA2059C40C0099FC45 /* BigNumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigNumTests.swift; sourceTree = "<group>"; };
 		5543F0FC2059C40C0099FC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5543F1062059C42A0099FC45 /* BigInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigInt.swift; sourceTree = "<group>"; };
+		5543F1082059C4F60099FC45 /* BigInt+Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+Numeric.swift"; sourceTree = "<group>"; };
+		5543F10C2059C5370099FC45 /* BigInt+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+Comparable.swift"; sourceTree = "<group>"; };
+		5543F10E2059C72C0099FC45 /* BigInt+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+Initializers.swift"; sourceTree = "<group>"; };
+		5543F1122059DDF50099FC45 /* AdditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				5543F0EF2059C40C0099FC45 /* BigNum.h */,
+				5543F1062059C42A0099FC45 /* BigInt.swift */,
+				5543F10E2059C72C0099FC45 /* BigInt+Initializers.swift */,
+				5543F1082059C4F60099FC45 /* BigInt+Numeric.swift */,
+				5543F10C2059C5370099FC45 /* BigInt+Comparable.swift */,
+				5519F7C1205D82F800AD7B3E /* Digit.swift */,
 				5543F0F02059C40C0099FC45 /* Info.plist */,
 			);
 			path = BigNum;
@@ -80,7 +101,10 @@
 		5543F0F92059C40C0099FC45 /* BigNumTests */ = {
 			isa = PBXGroup;
 			children = (
-				5543F0FA2059C40C0099FC45 /* BigNumTests.swift */,
+				5543F1122059DDF50099FC45 /* AdditionTests.swift */,
+				5519F7C3205DC36700AD7B3E /* SubtractionTests.swift */,
+				5519F7C7205DC37B00AD7B3E /* MultiplicationTests.swift */,
+				5519F7C5205DC37200AD7B3E /* DivisionTests.swift */,
 				5543F0FC2059C40C0099FC45 /* Info.plist */,
 			);
 			path = BigNumTests;
@@ -148,6 +172,7 @@
 				TargetAttributes = {
 					5543F0EB2059C40C0099FC45 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					5543F0F42059C40C0099FC45 = {
 						CreatedOnToolsVersion = 9.3;
@@ -194,6 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5543F10D2059C5370099FC45 /* BigInt+Comparable.swift in Sources */,
+				5543F1092059C4F60099FC45 /* BigInt+Numeric.swift in Sources */,
+				5543F10F2059C72C0099FC45 /* BigInt+Initializers.swift in Sources */,
+				5519F7C2205D82F800AD7B3E /* Digit.swift in Sources */,
+				5543F1072059C42A0099FC45 /* BigInt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5543F0FB2059C40C0099FC45 /* BigNumTests.swift in Sources */,
+				5519F7C6205DC37200AD7B3E /* DivisionTests.swift in Sources */,
+				5519F7C8205DC37B00AD7B3E /* MultiplicationTests.swift in Sources */,
+				5519F7C4205DC36700AD7B3E /* SubtractionTests.swift in Sources */,
+				5543F1132059DDF50099FC45 /* AdditionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +371,7 @@
 		5543F1012059C40C0099FC45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -357,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.syzygydev.BigNum;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -364,6 +399,7 @@
 		5543F1022059C40C0099FC45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -390,6 +426,7 @@
 		5543F1042059C40C0099FC45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 654LUM7646;
@@ -408,6 +445,7 @@
 		5543F1052059C40C0099FC45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 654LUM7646;
