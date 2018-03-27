@@ -6,7 +6,14 @@
 //  Copyright © 2018 Syzygy. All rights reserved.
 //
 
-import Foundation
+import Swift
+
+precedencegroup ExponentiationPrecedence {
+    associativity: right
+    higherThan: BitwiseShiftPrecedence
+}
+
+infix operator **: ExponentiationPrecedence
 
 extension BigInt: Numeric {
     
@@ -128,6 +135,14 @@ extension BigInt: Numeric {
         
         let isNegative = lhs.isNegative != rhs.isNegative
         return BigInt(Array(quotient.reversed()), isNegative: isNegative)
+    }
+    
+    public static func ** (lhs: BigInt, rhs: BigInt) -> BigInt {
+        guard rhs.isNegative == false else { fatalError("Cannot perform negative exponentiation") }
+        let resultIsNegative = lhs.isNegative && rhs.isOdd
+        
+        let result = Digit.power(base: lhs.digits, exponent: rhs.digits)
+        return BigInt(result, isNegative: resultIsNegative)
     }
     
 }

@@ -31,6 +31,12 @@ public struct BigInt: CustomStringConvertible {
         return sign + visibleDigitis.reversed().map { "\($0.rawValue)" }.joined()
     }
     
+    public var isEven: Bool {
+        return digits.isEmpty || Digit.evenDigits.contains(digits[0])
+    }
+    
+    public var isOdd: Bool { return !isEven }
+    
     public func negated() -> BigInt {
         return BigInt(digits, isNegative: !isNegative)
     }

@@ -28,6 +28,9 @@ internal typealias Digits = Array<Digit>
 
 internal enum Digit: Int, Comparable {
     
+    static let evenDigits: Array<Digit> = [.zero, .two, .four, .six, .eight]
+    static let oddDigits: Array<Digit> = [.one, .three, .five, .seven, .nine]
+    
     case zero = 0, one, two, three, four, five
     case six, seven, eight, nine, ten
     
@@ -117,12 +120,17 @@ internal enum Digit: Int, Comparable {
         return digits
     }
     
-    static func multiply(lhs: Digits, rhs: Digits) -> Digits {
+    private static func intermediateMultiplicationSums(lhs: Digits, rhs: Digits) -> Array<Digits> {
         var terms = Array<Digits>()
         for (powerOf10, digit) in rhs.enumerated() {
             let multiplication = Array(repeating: .zero, count: powerOf10) + multiply(digits: lhs, by: digit)
             terms.append(multiplication)
         }
+        return terms
+    }
+    
+    static func multiply(lhs: Digits, rhs: Digits) -> Digits {
+        let terms = intermediateMultiplicationSums(lhs: lhs, rhs: rhs)
         return sum(terms)
     }
     
@@ -157,5 +165,18 @@ internal enum Digit: Int, Comparable {
             multiple += 1
         }
         return (Digit(rawValue: multiple) ?? .zero, remaining)
+    }
+    
+    static func power(base: Digits, exponent: Digits) -> Digits {
+        if exponent.isEmpty || exponent == [.zero] { return [.one] }
+        if exponent == [.one] { return base; }
+        
+        var result = base
+        var repetitions = Digit.subtract(lhs: exponent, rhs: [.one])
+        while repetitions.isEmpty == false {
+            result = Digit.multiply(lhs: result, rhs: base)
+            repetitions = Digit.subtract(lhs: repetitions, rhs: [.one])
+        }
+        return result
     }
 }
