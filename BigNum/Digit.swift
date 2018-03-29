@@ -120,17 +120,12 @@ internal enum Digit: Int, Comparable {
         return digits
     }
     
-    private static func intermediateMultiplicationSums(lhs: Digits, rhs: Digits) -> Array<Digits> {
+    static func multiply(lhs: Digits, rhs: Digits) -> Digits {
         var terms = Array<Digits>()
         for (powerOf10, digit) in rhs.enumerated() {
             let multiplication = Array(repeating: .zero, count: powerOf10) + multiply(digits: lhs, by: digit)
             terms.append(multiplication)
         }
-        return terms
-    }
-    
-    static func multiply(lhs: Digits, rhs: Digits) -> Digits {
-        let terms = intermediateMultiplicationSums(lhs: lhs, rhs: rhs)
         return sum(terms)
     }
     
